@@ -9,8 +9,53 @@
   <body>
     <body>
       <h1>Document Object Model</h1>
+    
     <script>
-      // your code goes here
+      // 1. Use createElement() on the document object to create a new `p` element
+      let para = document.createElement("p");
+
+      // 2. Use `textContent` property and set the text inside `p` to 'Hello Javascript!'.
+      para.textContent = "Hello JavaScript";
+  
+      // 3. Now use the `innerHTML` property to add HTML inside `p` add `I love <strong>Javascript</strong>`.
+      para.innerHTML = "I love <strong> JavaSript </strong?>";   
+      
+      /* 4. Create a structure like this using js and push it to the document.
+
+            <ul>
+              <li>Buy groceries</li>
+              <li>Feed the cat</li>
+              <li>Do laundry</li>
+            </ul>
+      */    
+  
+      let ullist = document.createElement("ul");  
+  
+      let li0 = document.createElement("li");
+      li0.innerText = "Buy groceries";
+
+      let li1 = document.createElement("li");
+      li1.innerText = "Feed the cat";
+
+      let li2 = document.createElement("li");
+      li2.innerText = "Do laundry";
+  
+      ullist.append(li0, li1, li2);  
+      
+      document.body.appendChild(ullist);
+
+      // 5. Create a new `li` element and push it in the `ul` using `appendChild`.
+      
+      let li3 = document.createElement("li");
+      li3.innerText = "Another List"
+      ullist.appendChild(li3);
+      
+      // 6. Using `removeChild()` or `remove()` remove an element from the ul. -->
+      lastremove = document.querySelector("ul").lastElementChild;
+      lastremove.remove();    
+      console.log(lastremove);  
+
     </script>
   </body>
 </html>
+

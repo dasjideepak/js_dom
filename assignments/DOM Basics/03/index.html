@@ -38,6 +38,29 @@
     const h1 = document.getElementsByTagName("h1")[0];
     const p = document.getElementsByTagName("p")[0];
     const ul = document.getElementsByTagName("ul")[0];
-    // Your code goes here
+
+    // 1. Use firstElementChild, and change the background color of the first `li` in the `ul`.
+    var elem1 = document.querySelector("ul").firstElementChild;
+    elem1.style.backgroundColor = "red";
+
+    // 2. Select all the `li` element and using `forEach` or `for..of` loop change the background color of all the `li` in `ul`.
+    var listItem = document.querySelectorAll("li").forEach(listItem => { 
+      listItem.style.backgroundColor = "green";
+    });
+
+    // 3. Access `li` node using the length property i.e node[0] and access the last list and change the color to `pink`.
+    var pinkbg = document.querySelectorAll("li")[2];
+    pinkbg.style.backgroundColor = "pink";
+
+    // 4. Select the middle element `li`
+    var middleli = document.querySelectorAll("li")[1];
+    
+    // 5. Use the element in 4 and using sibling nodes change the background color of first and last `li` to `coral` and `aquamarine`;
+    var firstli = document.querySelectorAll("li")[1].previousElementSibling;
+    firstli.style.backgroundColor = "coral";
+
+    var lastli = document.querySelectorAll("li")[1].nextElementSibling;
+    lastli.style.backgroundColor = "aquamarine"
+
   </script>
 </html>

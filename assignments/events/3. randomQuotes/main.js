@@ -1,8 +1,20 @@
 var quotes;
 
-// Write your code here
+var heading = document.createElement("h1");
+heading.innerText = "Random Quotes Changer";
+document.body.append(heading);
 
+var para = document.createElement("h2");
+para.innerText = "Press any key to change the quotes";
+document.body.append(para)
 
+document.addEventListener("keyup" , function(event) { 
+    if(event.keyCode === 32){
+        let randomNumber = Math.round(Math.random() * quotes.length-1);
+        document.querySelector("#quoteShow").innerHTML = quotes[randomNumber].quoteText;
+        document.querySelector("#quoteAuthorShow").innerHTML = quotes[randomNumber].quoteAuthor;
+    }
+})
 
 quotes = [
     {

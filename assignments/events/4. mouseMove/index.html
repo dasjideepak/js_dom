@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mouse Move</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS Style -->
+    <style>
+        body {
+            max-width: 800px;
+            margin: 0 auto;
+            height: 600px;
+            border: 2px solid black;
+            margin-top: 40px;
+            padding: 10px 40px;
+        }
+        .main-heading {
+            font-size: 64px;
+            font-weight: 800;
+        }
+        h2 {
+            font-size: 48px;
+        }
+    </style>
+  </head>
+  <body>
+     <!-- JavaScript Code  -->
+    <script>
+        var mainHeading = document.createElement("h1");
+        mainHeading.classList.add("main-heading");
+        mainHeading.innerText = "Mouse Your Mouse"
+
+        var heading1 = document.createElement("h2");
+        heading1.classList.add("sXc");
+
+        var heading2 = document.createElement("h2");
+        heading2.classList.add("sYc");
+
+        var heading3 = document.createElement("h2");
+        heading3.classList.add("cXc");
+
+        var heading4 = document.createElement("h2");
+        heading4.classList.add("cYc");
+
+        document.body.append(mainHeading, heading1, heading2, heading3, heading4);
+
+        document.addEventListener("mousemove", function(event) {            
+            var sX = document.querySelector(".sXc")
+            sX.innerText = event.screenX;
+            
+            var sY = document.querySelector(".sYc")
+            sY.innerText = event.screenY;
+            
+            var cX = document.querySelector(".cXc")
+            cX.innerText = event.clientX;
+            
+            var cY = document.querySelector(".cYc")
+            cY.innerText = event.clientY;
+        })
+    </script>
+  </body>
+</html>
