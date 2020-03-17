@@ -29,7 +29,7 @@
             </ul>
       */    
   
-      let ullist = document.createElement("ul");  
+      let ulList = document.createElement("ul");  
   
       let li0 = document.createElement("li");
       li0.innerText = "Buy groceries";
@@ -40,20 +40,20 @@
       let li2 = document.createElement("li");
       li2.innerText = "Do laundry";
   
-      ullist.append(li0, li1, li2);  
+      ulList.append(li0, li1, li2);  
       
-      document.body.appendChild(ullist);
+      document.body.appendChild(ulList);
 
       // 5. Create a new `li` element and push it in the `ul` using `appendChild`.
       
       let li3 = document.createElement("li");
       li3.innerText = "Another List"
-      ullist.appendChild(li3);
+      ulList.appendChild(li3);
       
       // 6. Using `removeChild()` or `remove()` remove an element from the ul. -->
-      lastremove = document.querySelector("ul").lastElementChild;
-      lastremove.remove();    
-      console.log(lastremove);  
+      lastRemove = document.querySelector("ul").lastElementChild;
+      lastRemove.remove();    
+      console.log(lastRemove);  
 
     </script>
   </body>
