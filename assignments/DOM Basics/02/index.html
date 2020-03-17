@@ -46,7 +46,33 @@
     <div class="demo-query-all">Access me by query all (1)</div>
     <div class="demo-query-all">Access me by query all (2)</div>
     <script>
-      // your code goes here
+
+      // 1. Select the element with an id of `demo` and apply style `1px solid purple` on that.
+      var elem1 = document.querySelector("#demo");
+      elem1.style.border = "1px solid purple";
+    
+      // 2. Select all the elements by class name of `demo` and apply the style `1px solid orange` to each element.
+      var elem2 = document.querySelectorAll(".demo").forEach(elem2 => { 
+        elem2.style.border = "1px solid orange"
+      });
+    
+      // 3. Select all the elements by tag name of `article` and apply this style `1px solid blue`.
+      var elem3 = document.querySelectorAll("article").forEach(elem3 => {
+        elem3.style.border = "1px solid blue";
+      });
+
+      // 4. Select the element by id of `demo-query` using querySelector and apply style of `1px solid grey`.
+      var elem4 = document.querySelector("#demo-query")
+      elem4.style.border = "1px solid grey"; 
+
+      // 5. Select the element by class of `demo-query-all` using querySelectorAll and apply style of `1px solid green`.  
+      var elem5 = document.querySelectorAll(".demo-query-all").forEach(elem5 => {
+        elem5.style.border = "1px solid green"
+      });
+
     </script>
   </body>
 </html>
+
+
+
